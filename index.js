@@ -46,10 +46,10 @@ class ScenarioThreshold {
 
         const scenarios = this.script.scenarios;
         const checks =
-            this.script.config?.ensure || this.script.config?.plugins?.ensure;
+            this.script.config['scenario-thresholds'] || this.script.config?.plugins['scenario-thresholds'];
         let thresholdPerEndpointEnabled = this.script.config?.ensure
             ?.thresholdPerEndpointEnabled
-            ? this.script.config.ensure.thresholdPerEndpointEnabled
+            ? this.script.config['scenario-threshold'].thresholdPerEndpointEnabled
             : false;
 
         global.artillery.ext({
