@@ -1,16 +1,24 @@
 {
   "name": "artillery-plugin-scenario-threshold",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Ensure extension to allow thresholds per scenario",
   "main": "index.js",
-  "devDependencies": {
-    "ts-node": "10.9.2",
-    "eslint-plugin-check-file": "^2.6.2",
-    "husky": "^8.0.3",
-    "lodash": "^4.17.21",
+  "scripts": {
+    "test": "npm run test:unit && npm run test:acceptance",
+    "test:acceptance": "export ARTILLERY_TELEMETRY_DEFAULTS='{\"source\":\"test-suite\"}' && tap ./test/*.spec.js --timeout 300 --no-coverage --color",
+    "test:unit": "tap ./test/*.unit.js --no-coverage --color"
+  },
+  "dependencies": {
     "chalk": "^2.4.2",
     "debug": "^4.3.3",
-    "filtrex": "^2.2.3"
+    "filtrex": "^2.2.3",
+    "husky": "^8.0.3",
+    "eslint-plugin-check-file": "^2.6.2",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "tap": "^16.3.8",
+    "zx": "^4.3.0"
   },
   "keywords": ["plugin", "artillery", "ensure"],
   "author": "Alex Goja",

@@ -1,0 +1,30 @@
+config:
+  target: "http://asciiart.artillery.io:8080"
+  ensure:
+    thresholdPerEndpointEnabled: true
+  phases:
+    - duration: 2
+      arrivalRate: 1
+      name: "Phase 1"
+  plugins:
+    ensure: {}
+
+scenarios:
+  - name: "Scenario1"
+    thresholds:
+      - http.response_time.p75: 1000
+      - http.response_time.p95: 2000
+      - http.response_time.p99: 1500
+      - vusers.failed: 5
+    flow:
+      - get:
+          url: "/"
+  - name: "Scenario2"
+    thresholds:
+      - http.response_time.p75: 500
+      - http.response_time.p95: 800
+      - http.response_time.p99: 900
+      - vusers.failed: 5
+    flow:
+      - get:
+          url: "/test"
