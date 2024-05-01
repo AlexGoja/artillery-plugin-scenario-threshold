@@ -1,6 +1,6 @@
 {
   "name": "artillery-plugin-scenario-threshold",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Ensure extension to allow thresholds per scenario",
   "main": "index.js",
   "scripts": {
