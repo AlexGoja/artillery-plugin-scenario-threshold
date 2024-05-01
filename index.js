@@ -46,8 +46,8 @@ class ScenarioThreshold {
 
         const scenarios = this.script.scenarios;
         const checks =
-            this.script.config['scenario-thresholds'] || this.script.config?.plugins['scenario-thresholds'];
-        let thresholdPerEndpointEnabled = this.script.config?.plugins['thresholds-enabled']
+            this.script.config['scenario-threshold'] || this.script.config?.plugins['scenario-threshold'];
+        let thresholdPerEndpointEnabled = this.script.config?.plugins['scenario-threshold']
             ?.thresholdPerEndpointEnabled
             ? this.script.config['scenario-threshold'].thresholdPerEndpointEnabled
             : false;
