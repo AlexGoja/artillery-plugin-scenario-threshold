@@ -11,10 +11,7 @@
   "dependencies": {
     "chalk": "^2.4.2",
     "debug": "^4.3.3",
-    "filtrex": "^2.2.3",
-    "husky": "^8.0.3",
-    "eslint-plugin-check-file": "^2.6.2",
-    "lodash": "^4.17.21"
+    "filtrex": "^2.2.3"
   },
   "devDependencies": {
     "tap": "^16.3.8",
